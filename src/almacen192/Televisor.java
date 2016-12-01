@@ -17,12 +17,31 @@ public class Televisor extends MaquinaElectrica
     
     public void mute(){}
     public void subirVol(){}
-    public void bajarVol(){}
-    public void subirCan(){}
+    public void bajarVol()
+    {
+        if(volumen==0)
+        {
+            volumen=0;
+        }
+        else
+        {
+            volumen--;
+        }
+    }
+    public void subirCan()
+    {
+        if(canal==120)
+        {
+            canal=2;
+        }
+        else
+        {
+            canal++;
+        }
+    }
     public void bajarCan(){}
     public void cambiarCan(byte cana){}
-    
-            
+               
     @Override
     void encender() 
     {    
