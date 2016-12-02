@@ -14,9 +14,22 @@ public class Televisor extends MaquinaElectrica
     byte canal=2;
     byte volumen=0;
     boolean encendido=false;
-    
-    public void mute(){}
-    public void subirVol(){}
+    boolean mute=false;
+    public void mute()
+    {
+      mute=mute!=true;
+    }
+    public void subirVol()
+    {
+     if(volumen==0)
+     {
+      volumen=0;
+     }
+     else
+     {
+      volumen++;
+     }
+    }
     public void bajarVol()
     {
         if(volumen==0)
@@ -39,8 +52,21 @@ public class Televisor extends MaquinaElectrica
             canal++;
         }
     }
-    public void bajarCan(){}
-    public void cambiarCan(byte cana){}
+    public void bajarCan(){
+    
+        if(canal==2)
+        {
+         canal=120;
+        }
+        else
+        {
+         canal--;
+        }
+    }
+    public void cambiarCan(byte cana)
+    {
+     
+    }
                
     @Override
     void encender() 
