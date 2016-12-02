@@ -14,8 +14,19 @@ public class Televisor extends MaquinaElectrica
     byte canal=2;
     byte volumen=0;
     boolean encendido=false;
+    boolean muted = false;
+    byte temp;
     
-    public void mute(){}
+    public void mute(){
+        if(muted)
+            muted = true;
+        else if (muted = true)
+            muted = false;
+        else if (muted = true && (volumen++ || volumen--))
+            temp = volumen;
+            muted = false;
+            volumen = temp;
+    }
     public void subirVol(){}
     public void bajarVol()
     {
