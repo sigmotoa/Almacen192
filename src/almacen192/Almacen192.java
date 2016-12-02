@@ -16,6 +16,9 @@ public class Almacen192 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Televisor tv1=new Televisor();
+        
+        
     }
     
 }
