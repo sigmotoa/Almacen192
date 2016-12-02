@@ -14,7 +14,7 @@ public class Televisor extends MaquinaElectrica
     byte canal=2;
     byte volumen=0;
     boolean encendido=false;
-    
+    //algo nuevo y raro
     public void mute(){}
     public void subirVol(){}
     public void bajarVol()
