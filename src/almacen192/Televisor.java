@@ -12,31 +12,43 @@ package almacen192;
 public class Televisor extends MaquinaElectrica
 {
     byte canal=2;
-    byte volumen=0;
+    byte volumen=25;
     boolean encendido=false;
     boolean muted = false;
-    byte temp;
-    
+    byte a = volumen;
+
     public void mute(){
-        if(muted)
+        if(muted || (muted && (subirVol() == volumen++ || bajarVol() == volumen--))) {
+            muted = false;
+            volumen = a;
+        }else if (!muted){
             muted = true;
-        else if (muted = true)
-            muted = false;
-        else if (muted = true && (volumen++ || volumen--))
-            temp = volumen;
-            muted = false;
-            volumen = temp;
+            volumen = 0;
+        }
     }
-    public void subirVol(){}
-    public void bajarVol()
+    public byte subirVol(){
+        if(volumen==100)
+        {
+            volumen=100;
+            return volumen;
+        }
+        else
+        {
+            volumen++;
+            return volumen;
+        }
+    }
+    public byte bajarVol()
     {
         if(volumen==0)
         {
             volumen=0;
+            return volumen;
         }
         else
         {
             volumen--;
+            return volumen;
         }
     }
     public void subirCan()
@@ -51,12 +63,15 @@ public class Televisor extends MaquinaElectrica
         }
     }
     public void bajarCan(){}
-    public void cambiarCan(byte cana){}
+    public void cambiarCan(byte selectedChannel){
+
+
+    }
                
     @Override
     void encender() 
     {    
-        encendido=encendido!=true;//Analizar de tarea
+        encendido=encendido!=true;//Resultado: true
     }
     
 }
